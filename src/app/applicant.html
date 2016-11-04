@@ -1,14 +1,15 @@
-<form>
-  <input placeholder="Nombres" name="firstname"
+<form (submit)="onSubmit()">
+  <input placeholder="Nombres" name="firstname" required
          [(ngModel)]="applicant.firstname" />
-  <input placeholder="Apellidos" name="laststname"
+  <input placeholder="Apellidos" name="laststname" required
          [(ngModel)]="applicant.lastname" />
-  <input placeholder="Cédula" name="id"
-         [(ngModel)]="applicant.id" />
+  <input placeholder="Cédula" name="id" required
+         [(ngModel)]="applicant.id" type="number" />
   <input placeholder="Nacimiento" type="date" name="birthDate"
          [(ngModel)]="applicant.birthDate" />
   <input placeholder="Email" type="email" name="email"
          [(ngModel)]="applicant.email" />
-  <input placeholder="Usuario en Github" name="githubUser"
+  <input placeholder="Usuario en Github" name="githubUser" required
          [(ngModel)]="applicant.githubUser" />
+  <input type="submit" value="Save" />
 </form>
